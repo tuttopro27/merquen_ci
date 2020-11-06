@@ -9,10 +9,10 @@
             <form name="login" action="/" method="post">
                 <div class="form-group">
                     <label for="nombre">Usuario</label>
-                    <select class="form-control form-control-lg" name="nombre" required>
-                        
+                    <select class="form-control form-control-lg" name="nombre" id="nombre">
+                    <option value="">Seleccione</option>
                     <?php foreach ($usuarios as $data) {?>
-                     <option value="<?=$data['id']?>"><?=$data['nombre'];?></option>
+                        <option <?php set_select('nombre', $data)?> value="<?= $data['id']?>"><?php $data=['nombre'] ?>"></option>
                 <?php } ?>    
                         
                 </select>
@@ -33,3 +33,13 @@
         </div>
     </div>
 </div>
+<script>
+    function validacombo(){
+        var validaformulario = document.getElementById('nombre'),
+        if(validaformulario.val()==0 || validaformulario.val()=="")
+        {
+            alert("selecciona una opcion")
+        }  
+
+         }
+</script>

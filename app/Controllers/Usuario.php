@@ -5,17 +5,17 @@ class Usuario extends BaseController
 {
 	public function index()
 	{
-		
         $usuarioModelo=new UsuarioModels($db);
         $data['usuarios']=$usuarioModelo->findAll();
         //var_dump($data);
-        helper(['form']);
-        
+		helper(['form']);
+		//var_dump($data);
 		if ($this->request->getMethod() == 'post') {
-		
+			//let's do the validation here
 			$rules = [
-				'nombre' => 'required|check',
-                'password' => 'required|min_length[3]|max_length[255]|validateUser[nombre,password]',
+				'nombre' => 'in_list[$data]',
+				'password' => 'required|min_length[3]|max_length[255]|validateUser[nombre,password]',
+				
 			];
 			$errors = [
 				'password' => [

@@ -13,7 +13,7 @@ class Usuario extends BaseController
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
-				'nombre' => 'in_list[$data]',
+			    'nombre' => 'required|is_not_unique[usuario.id]',
 				'password' => 'required|min_length[3]|max_length[255]|validateUser[nombre,password]',
 				
 			];
@@ -23,17 +23,17 @@ class Usuario extends BaseController
 				]
 			];
 			if (! $this->validate($rules, $errors)) {
+				die('exito');
 				$data['validation'] = $this->validator;
 			}else{
 				$model = new UsuarioModels();
-
+				die('exito');
 				$user = $model->where('nombre', $this->request->getVar('nombre'))
 											->first();
 
 				$this->setUserSession($user);
 				//$session->setFlashdata('success', 'Successful Registration');
 				return redirect()->to('home');
-
 			}
 		}
 		echo view('templates/headers');
@@ -42,7 +42,7 @@ class Usuario extends BaseController
 	}
     private function setUserSession($user){
 		$data = [
-			'id' => $user['id'],
+			
 			'nombre' => $user['nombre'],
 			'isLoggedIn' => true,
 		];

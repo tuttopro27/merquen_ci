@@ -1,6 +1,6 @@
-<?php namespace App\Controllers;
-
-class Dashboard extends BaseController
+<?php
+ namespace App\Controllers;
+class Garzones extends BaseController
 {
 	public function index()
 	{
@@ -8,7 +8,11 @@ class Dashboard extends BaseController
 		echo view('templates/header',);
 		echo view('dashboard');
 		echo view('templates/footer');
-	}
+    }
+    public function ingresarGarzones()
+    {
+        
+    }
 
 	//--------------------------------------------------------------------
 

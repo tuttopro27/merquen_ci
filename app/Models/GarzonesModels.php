@@ -2,7 +2,7 @@
 
 use CodeIgniter\Model;
 
-class FamiliaModels extends Model
+class GarzonesModels extends Model
 {
     protected $table      = 'garzones';
     protected $primaryKey = 'id';

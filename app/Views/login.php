@@ -4,8 +4,12 @@
             <div class="container">
                 <h3>Login</h3>
                 <hr>
+                <?php if (session()->get('success')): ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->get('success') ?>
+          </div>
+        <?php endif; ?>
             </div>
-
             <form name="login" action="/" method="post">
                 <div class="form-group">
                     <label for="nombre">Usuario</label>
@@ -20,25 +24,25 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" id="password" value="">
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-4">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                    
                     </div>
-                    <div class="col-12 col-sm-8 text-right">
-                        <a href="/register">crear una cuenta nueva?</a>
-                    </div>
-                </div>
-            </form>
-        </div>
+          <?php if (isset($validation)): ?>
+            <div class="col-12">
+              <div class="alert alert-danger" role="alert">
+                <?= $validation->listErrors() ?>
+              </div>
+            </div>
+          <?php endif; ?>
+          <div class="row">
+            <div class="col-12 col-sm-4">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <div class="col-12 col-sm-8 text-right">
+              <a href="/register">crear una nueva cuenta?</a>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
-<script>
-    function validacombo() {
-        var validaformulario = document.getElementById('nombre'),
-            if (validaformulario.val() == 0 || validaformulario.val() == "") {
-                alert("selecciona una opcion")
-            }
-
-    }
-</script>

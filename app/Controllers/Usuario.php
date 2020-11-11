@@ -8,7 +8,7 @@ class Usuario extends BaseController
 {
 	public function index()
 	{
-		$usuarioModelo=new UsuarioModels($db);
+		$usuarioModelo=new UsuarioModels();
         $data['usuarios']=$usuarioModelo->findAll();
         //var_dump($data);
 		helper(['form']);
@@ -16,8 +16,8 @@ class Usuario extends BaseController
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
-			    'nombre' => 'required|is_not_unique[usuario.id]',
-				'password' => 'required|min_length[3]|max_length[255]|validateUser[nombre,password]',
+			    'nombre' => 'required|is_not_unique[usuario.nombre]',
+				'password' => 'required|min_length[3]|max_length[255]|validaUsuario[nombre,password]',
 	];
 			$errors = [
 				'password' => [
@@ -29,12 +29,12 @@ class Usuario extends BaseController
 			}else{
 				$model = new UsuarioModels();
 				
-				$user = $model->where('nombre', $this->request->getVar('nombre'))
+				$user = $model->where('nombre', $this->request->getVar('dllnombre'))
 											->first();
 
 				$this->setUserSession($user);
 				//$session->setFlashdata('success', 'Successful Registration');
-				return redirect()->to('profile');
+				return redirect()->to('/home');
 			}
 		}
 		echo view('templates/headers');
@@ -55,36 +55,24 @@ class Usuario extends BaseController
 		session()->destroy();
 		return redirect()->to('/');
 	}
-	public function validacombo($selectedvalue)
+	
+	
+	public function validaselect()
 	{
-		if ($selectedvalue == 'none') {
-			$this->form_validation->set_message("select_validate", "seleccione una opcion");
+		$opcion = $this->input->post("ddlnombre");
+		if(is_null($opcion))
+		{
+			$opcion = array();
+		}
+		$nombreGroup = implode(',', $opcion);
+	
+		if($nombreGroup != '') {
+			return true;
+		} else {
+			$this->form_validation->set_message('select_validate', 'seleccione un elemento');
 			return false;
 		}
 	}
-	public function login()
-	{
-		if ($this->exists($_POST['nombre'], $_POST['password']) != NULL) {
-			$session = session();
-			$session->set('nombre', $_POST['nombre']);
-			return $this->response->redirect(site_url('/home'));
-		} else {
-			$data['msg'] = 'error';
-			echo view('template/header');
-			echo view('login', $data);
-			echo view('template/footer');
-		}
-	}
-	private function exists($nombre, $password) {
-        $usuarios = new UsuarioModels();
-        $cuenta = $usuarios->where('nombre', $nombre)->first();
-        if ($cuenta != NULL) {
-            if (password_verify($password, $cuenta['password'])) {
-                return $cuenta;
-            }
-        }
-        return NULL;
-    }
 }
 
 

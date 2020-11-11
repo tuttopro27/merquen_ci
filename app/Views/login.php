@@ -10,13 +10,13 @@
           </div>
         <?php endif; ?>
             </div>
-            <form name="login" action="/" method="post">
+            <form name="login" action= "/" method="post">
                 <div class="form-group">
                     <label for="nombre">Usuario</label>
-                    <select class="form-control form-control-lg" name="nombre" id="nombre">
+                    <select class="form-control form-control-lg" name="nombre" value="<?= set_value('email') ?>">
                         <option value="">Seleccione</option>
                         <?php foreach ($usuarios as $data) { ?>
-                            <option value="<?php echo $data['id']?>" <?php echo set_select('nombre', $data['id'])?>><?php echo $data['nombre']?></option>
+                            <option value="<?php echo $data['nombre']?>" <?php echo set_select('nombre', $data['nombre'])?>><?php echo $data['nombre']?></option>
                         <?php } ?>
                            
                     </select>

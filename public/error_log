@@ -1,0 +1,21 @@
+[10-Nov-2020 16:04:09 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CodeIgniter\HTTP\URI::setScheme() must be of the type string, null given, called in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php on line 616 and defined in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/URI.php:630
+Stack trace:
+#0 /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php(616): CodeIgniter\HTTP\URI->setScheme(NULL)
+#1 /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php(184): CodeIgniter\HTTP\IncomingRequest->detectURI('REQUEST_URI', '/merquenmovil/m...')
+#2 /home/andes242/public_html/merquenmovil/merquen/system/Config/Services.php(607): CodeIgniter\HTTP\IncomingRequest->__construct(Object(Config\App), Object(CodeIgniter\HTTP\URI), '', Object(CodeIgniter\HTTP\UserAgent))
+#3 /home/andes242/public_html/merquenmovil/merquen/system/Config/BaseService.php(123): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#4 /home/andes242/public_html/merquenmo in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/URI.php on line 630
+[10-Nov-2020 16:07:18 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CodeIgniter\HTTP\URI::setScheme() must be of the type string, null given, called in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php on line 616 and defined in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/URI.php:630
+Stack trace:
+#0 /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php(616): CodeIgniter\HTTP\URI->setScheme(NULL)
+#1 /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php(184): CodeIgniter\HTTP\IncomingRequest->detectURI('REQUEST_URI', '/merquenmovil/m...')
+#2 /home/andes242/public_html/merquenmovil/merquen/system/Config/Services.php(607): CodeIgniter\HTTP\IncomingRequest->__construct(Object(Config\App), Object(CodeIgniter\HTTP\URI), '', Object(CodeIgniter\HTTP\UserAgent))
+#3 /home/andes242/public_html/merquenmovil/merquen/system/Config/BaseService.php(123): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#4 /home/andes242/public_html/merquenmo in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/URI.php on line 630
+[10-Nov-2020 16:07:27 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to CodeIgniter\HTTP\URI::setScheme() must be of the type string, null given, called in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php on line 616 and defined in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/URI.php:630
+Stack trace:
+#0 /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php(616): CodeIgniter\HTTP\URI->setScheme(NULL)
+#1 /home/andes242/public_html/merquenmovil/merquen/system/HTTP/IncomingRequest.php(184): CodeIgniter\HTTP\IncomingRequest->detectURI('REQUEST_URI', '/merquenmovil/m...')
+#2 /home/andes242/public_html/merquenmovil/merquen/system/Config/Services.php(607): CodeIgniter\HTTP\IncomingRequest->__construct(Object(Config\App), Object(CodeIgniter\HTTP\URI), '', Object(CodeIgniter\HTTP\UserAgent))
+#3 /home/andes242/public_html/merquenmovil/merquen/system/Config/BaseService.php(123): CodeIgniter\Config\Services::request(Object(Config\App), false)
+#4 /home/andes242/public_html/merquenmo in /home/andes242/public_html/merquenmovil/merquen/system/HTTP/URI.php on line 630

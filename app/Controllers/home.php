@@ -1,16 +1,18 @@
 <?php namespace App\Controllers;
 use App\Models\PuntosModels;
 
-class Puntos extends BaseController
+class Home extends BaseController
 {
 	public function index()
 	{
-		$pointmodels=new PuntosModels();
-		$data['punto']=$pointmodels->findAll();
-		var_dump($data);
+		
+		$db= db_connect();		
+		$PuntosModels= new PuntosModels($db);
+		$data['puntos']=$PuntosModels->getallPos();
 		echo view('templates/headers');
 		echo view('home',$data);
-		echo view('templates/footer');		
+		echo view('templates/footer');
+
 	
 	}
 	

@@ -29,7 +29,7 @@ class Usuario extends BaseController
 			}else{
 				$model = new UsuarioModels();
 				
-				$user = $model->where('nombre', $this->request->getVar('dllnombre'))
+				$user = $model->where('nombre', $this->request->getVar('nombre'))
 											->first();
 
 				$this->setUserSession($user);
@@ -59,7 +59,7 @@ class Usuario extends BaseController
 	
 	public function validaselect()
 	{
-		$opcion = $this->input->post("ddlnombre");
+		$opcion = $this->input->post("nombre");
 		if(is_null($opcion))
 		{
 			$opcion = array();

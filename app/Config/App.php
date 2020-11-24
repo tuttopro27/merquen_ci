@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://andessystems.cl/merquenmovil/merquen/';
+	public $baseURL = 'https://andessystems.cl/merquenmovil/merquen/public/';
 
 	/*
 	|--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ class App extends BaseConfig
 	| should run under for this request.
 	|
 	*/
-	public $defaultLocale = 'en';
+	public $defaultLocale = 'es';
 
 	/*
 	|--------------------------------------------------------------------------

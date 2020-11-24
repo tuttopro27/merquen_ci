@@ -21,7 +21,7 @@ class Usuario extends BaseController
 	];
 			$errors = [
 				'password' => [
-					'validateUser' => 'nombre o password no coinciden'
+					'validaUsuario' => 'nombre o password no coinciden'
 				]
 			];
 			if (! $this->validate($rules, $errors)) {
@@ -34,7 +34,7 @@ class Usuario extends BaseController
 
 				$this->setUserSession($user);
 				//$session->setFlashdata('success', 'Successful Registration');
-				return redirect()->to('/home');
+				return redirect()->to(site_url('/home'));
 			}
 		}
 		echo view('templates/headers');
@@ -53,7 +53,7 @@ class Usuario extends BaseController
 	public function logout()
 	{
 		session()->destroy();
-		return redirect()->to('/');
+		return redirect()->to(base_url('logout'));
 	}
 	
 	

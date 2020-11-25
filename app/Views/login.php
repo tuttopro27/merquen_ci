@@ -42,10 +42,7 @@
           <div class="col-12 col-sm-4">
             <button type="submit" class="btn btn-primary">Login</button>
           </div>
-          <div class="col-12 col-sm-8 text-right">
-            <a href="<?php base_url() ?>Usuario/register">crear una nueva cuenta?</a>
           </div>
-        </div>
       </form>
     </div>
   </div>

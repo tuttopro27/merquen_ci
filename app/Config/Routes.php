@@ -31,6 +31,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Usuario::index');
 $routes->get('home','Home::index');
+$routes->get('mesas', 'mesas::index');
 
 
 /**

@@ -14,6 +14,7 @@ class Home extends BaseController
 		// echo '<pre>';
 		//var_dump($data);
 		echo view('templates/headers');
+		echo view('templates/menu');
 		echo view('home',$data);
 		echo view('templates/footer');
 

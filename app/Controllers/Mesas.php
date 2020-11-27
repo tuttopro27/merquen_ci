@@ -6,30 +6,22 @@ use FFI\Exception;
 class Mesas extends BaseController
 {
 	public function index()
-	{ 
+	{     
         $db= db_connect();		
         $mesasModels= new mesasModels($db);
         $data['mesas']=$mesasModels->getAllMesas();
-        $ejex=0;
-        $ejey=0;
-        try
-        {
-           $imagen= \Config\services::image()
-            ->withFile('img/fondo/piso-madera.jpeg')
-            ->reorient();
-            //processing images
-            
-           
-          
-        }catch (Exception $e)
-        {
-                echo $e->getMessage();
-        }
-		echo view('mesas',$data);
-        }
-        
-    
+        //  echo '<pre>';
+		//  print_r($data);
+        //  echo '</pre>';
+        $alto=0;
+        $ancho=0;        
+        echo view('templates/headers');
+        echo view('templates/menu');
+        echo view('mesas',$data);
+        echo view('templates/footer'); 
     }
+    
+}
 
 		
     

@@ -1,26 +1,19 @@
-<h3>Bienvenido <?= session()->get('nombre') ?></h3>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-       <div class="card" style="width: 18rem;">
-  <div class="card-header">
-    <h2>Puntos de venta</h2>
-  </div>
-  <ul class="list-group list-group-flush">
-    <?php 
-    foreach ($puntos as $pnt)
-    {
-      echo'<li class="list-group-item"><a href="#">'.$pnt->nombre.'</a></li>';
-    }
-    ?>
-  </ul>
-</div>      
-            
-    </div><form>
-             
-
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-row-2">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+            </ol>
           </div>
-      </div>
-    </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <section class="content">
+               <center><img src="<?php base_url(); ?>img/andes.jpg" /></center>      
+    </section>
   </div>
-</div>
+  

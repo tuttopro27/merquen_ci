@@ -13,9 +13,7 @@
             <?= session()->get('success') ?>
           </div>
         <?php endif; ?>
-
       </div>
-
       <form name="login" action="<?php base_url() ?>Usuario" method="post">
         <div class="form-group">
           <label for="nombre">Usuario</label>

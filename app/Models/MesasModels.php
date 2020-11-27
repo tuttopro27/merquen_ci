@@ -33,5 +33,12 @@ class MesasModels extends Model
     {
         return $this->db->table('mesas')->get()->getResult();
     }
- 
+    public function getAllTablesBar(){
+        $this->db->table->select('p.nombre','m.numero_Mesa', 'm.forma', 'm.persona', 'm.alto', 'm.ancho')
+         ->from('mesas')
+         ->where('m.id_puntos')
+         ->join('puntos','id_puntos= m.id_puntos');
+         
+         
+    }
 }

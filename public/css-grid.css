@@ -2,7 +2,7 @@
     display: grid;
     image-orientation: left;
     grid-template-columns: 130px 120px 120px 120px 120px 120px 120px 120px 120px 120px ;
-    grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+    grid-template-rows: 90px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
     
    }
 .box {

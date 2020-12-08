@@ -37,9 +37,8 @@ class Usuario extends BaseController
 				return redirect()->to(site_url('/home'));
 			}
 		}
-		echo view('templates/headers');
+		
 		echo view('login',$data);
-		echo view('templates/footer');
 	}
 	private function setUserSession($user){
 		$data = [
@@ -53,7 +52,7 @@ class Usuario extends BaseController
 	public function logout()
 	{
 		session()->destroy();
-		return redirect()->to(base_url('logout'));
+		return redirect()->to(base_url('Usuario'));
 	}
 	
 	

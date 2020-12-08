@@ -29,8 +29,12 @@ class PuntosModels extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
-     function getallPos()
+     function getNombrePos()
     {
-        return $this->db->table('puntos')->get()->getResult();
+        return $this->db->table('puntos')
+                        ->select('nombre')
+                        ->get()
+                        ->getResult();
+
     }
 }

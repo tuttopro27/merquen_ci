@@ -6,14 +6,11 @@ use CodeIgniter\Model;
 class MesasModels extends Model
 
 {
-    
-
     public function __construct(ConnectionInterface &$db)
     {
         $this->db =& $db;
         
     }
-    
     protected $table      = 'mesas';
     protected $primaryKey = 'id_mesas';
 
@@ -30,13 +27,17 @@ class MesasModels extends Model
      function getAllTablesBar(){
 
         return $this->db->table('mesas')
-            ->select('id_puntos, numero_Mesa, forma, personas, alto, ancho')
-            ->where('`id_puntos` in (select `id_puntos` from puntos where id_puntos =1 )')
+            ->select('numero_Mesa, forma, personas, alto, ancho')
+            ->where('id_puntos = 1')
             ->get()
             ->getResult();
     }
     public function getAllTablesRes()
     {
-
+        return $this->db->table('mesas')
+        ->select('id_puntos, numero_Mesa, forma, personas, alto, ancho')
+        ->where('`id_puntos` in (select `id_puntos` from puntos where id_puntos =3 )')
+        ->get()
+        ->getResult();
     }
 }

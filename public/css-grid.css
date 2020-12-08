@@ -1,14 +1,45 @@
-.game-board{ 
-    display: grid;
-    image-orientation: left;
-    grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px ;
-    grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
-    
-   }
-.box {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-   }
-   .wall{
-    background-color:black;
-  }
+
+  /* DivTable.com */
+.divTable{
+	display: table;
+  width: auto;
+  background-image: url("img/piso-madera.jpeg")
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 0px solid #999999;
+	display: table-cell;
+  	height: 100px;
+  	width: 100px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+.divflotante{
+	font-weight: bolder;
+	position: relative;
+    top: -53px;
+    left: 37px;
+}
+.TableRestorant{
+  display: table;
+  width: 100%;
+  background-image: url("img/piso-restaurante.jpg");
+}

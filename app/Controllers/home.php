@@ -8,14 +8,15 @@ class Home extends BaseController
 		
 		$db= db_connect();		
 		$PuntosModels= new PuntosModels($db);
-		$data['puntos']=$PuntosModels->getallPos();
+		$data['puntos']=$PuntosModels->getNombrePos();
+		
 		// echo '<pre>';
 		// print_r($data);
 		// echo '<pre>';
 		//var_dump($data);
 		echo view('templates/headers');
-		echo view('templates/menu');
-		echo view('home',$data);
+		echo view('templates/menu', $data);
+		echo view('home');
 		echo view('templates/footer');
 
 	

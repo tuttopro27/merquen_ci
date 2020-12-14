@@ -1,4 +1,4 @@
-<link rel="stylesheet" a href="<?= base_url()?>css-grid.css">
+
 <div class="content-wrapper">
 
     <!-- Content Header (Page header) -->
@@ -11,7 +11,7 @@
 
           <div class="col-sm-6">
 
-            <h1 class="m-0 text-dark">Home</h1>
+            <h1 class="m-0 text-dark">Restaurante</h1>
 
           </div><!-- /.col -->
 
@@ -50,7 +50,7 @@
         <div class="row">
 
         <?php
-
+        $url= base_url();
         $incremento=0;
 
         foreach ($mesas as $ms){
@@ -67,17 +67,17 @@
 
           if ($ms->personas == 2) {
 
-            $mesa=  "<img src='img/rvacia.gif' width='90px' ><div class='divflotante'>$numero_mesa</div>";
+            $mesa=  "<a href='{$url}/tables'><img src='../img/rvacia.gif' width='90px' ><div class='divflotante'>$numero_mesa</div></a>";
 
           } else if ($ms->personas == 4) {
 
-            $mesa = "<img src='img/vacia.gif' width='90px' /><div class='divflotante'>$numero_mesa</div>";
+            $mesa = "<a href='{$url}/tables'><img src='../img/vacia.gif' width='90px' /><div class='divflotante'>$numero_mesa</div></a>";
 
           }
 
           else if ($ms->personas == 6) {
 
-            $mesa = "<img src='img/recvacia.gif' width='90px' /><div class='divflotante'>$numero_mesa</div>";  
+            $mesa = "<a href='{$url}/tables'><img src='../img/recvacia.gif' width='90px' /><div class='divflotante'>$numero_mesa</div></a>";  
 
           }
 
@@ -111,7 +111,8 @@
 
         <div class="row">
 
-          <div class="divTable">
+          <div class="TableRestaurante">
+            
 
             <div class="divTableBody">
 

@@ -2,7 +2,7 @@
 use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Model;
 
-class PuntosModels extends Model
+class   TablesModels extends Model
 
 {
     protected $db;

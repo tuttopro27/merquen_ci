@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -8,7 +8,8 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" a href="<?= base_url() ?>/css-grid.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/css-grid.css">
+  <script src="<?= base_url(); ?>/plugins/calculadora.js"></script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url() ?>/plugins/fontawesome-free/css/all.min.css">

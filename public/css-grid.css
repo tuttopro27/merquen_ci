@@ -1,9 +1,12 @@
-
-  /* DivTable.com */
 .divTable{
-	display: table;
-  width: auto;
-  background-image: url("img/piso-madera.jpeg")
+    height: auto;
+    width: auto;
+    display: table;
+    background-image: url("img/piso-madera.jpg");
+    max-width: 100% !important;
+	margin-right: 4.16666667%;
+	max-height: 100% !important;
+  
 }
 .divTableRow {
 	display: table-row;
@@ -38,8 +41,13 @@
     top: -53px;
     left: 37px;
 }
-.TableRestorant{
-  display: table;
-  width: 100%;
-  background-image: url("img/piso-restaurante.jpg");
-}
+.TableRestaurante{
+    height: auto;
+    width: auto;
+    display: table;
+    max-width: 100%;
+	background-image: url("img/piso-restaurante.jpg");
+	max-width: 100% !important;
+	margin-right: 4.16666667%;
+	max-height: 100% !important;
+  }

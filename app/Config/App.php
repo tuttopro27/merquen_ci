@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://andessystems.cl/merquenmovil/merquen/public/';
+	public $baseURL = 'http://localhost';
 
 	/*
 	|--------------------------------------------------------------------------

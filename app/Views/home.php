@@ -38,8 +38,6 @@
 
             <center><img src="<?php base_url();?>img/andes.jpg"></center>
 
-    
-
         </div>
 
         <!-- /.row (main row) -->

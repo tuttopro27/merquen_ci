@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" a href="<?= base_url()?>css-grid.css">
+
 <div class="content-wrapper">
 
     <!-- Content Header (Page header) -->
@@ -12,7 +12,7 @@
 
           <div class="col-sm-6">
 
-            <h1 class="m-0 text-dark">Home</h1>
+            <h1 class="m-0 text-dark">Bar</h1>
 
           </div><!-- /.col -->
 

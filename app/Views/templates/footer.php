@@ -88,7 +88,6 @@
 
 <script src="<?= base_url()?>/dist/js/demo.js"></script>
 
-<link rel="stylesheet" a href="<?= base_url()?>/css-grid.css">
 
 
 

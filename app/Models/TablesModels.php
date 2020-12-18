@@ -29,12 +29,11 @@ class   TablesModels extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
-     function getNombrePos()
+     function getNamePos()
     {
-        return $this->db->table('puntos')
+        return $this->db->table('tables')
                         ->select('nombre, redic')
                         ->get()
                         ->getResult();
-
     }
 }

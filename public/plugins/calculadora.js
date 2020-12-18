@@ -1,49 +1,7 @@
-
-    function igual() {
-        switch (document.getElementsByName('operacion')[0].value) {
-            case ("suma"):
-                document.getElementsByName('calc')[0].value = parseInt(document.getElementsByName('resultado')[0].value) + parseInt(document.getElementsByName('calc')[0].value);
-                break;
-            case ("resta"):
-                document.getElementsByName('calc')[0].value = parseInt(document.getElementsByName('resultado')[0].value) - parseInt(document.getElementsByName('calc')[0].value);
-                break;
-            case ("multiplicacion"):
-                document.getElementsByName('calc')[0].value = parseInt(document.getElementsByName('resultado')[0].value) * parseInt(document.getElementsByName('calc')[0].value);
-                break;
-            case ("division"):
-                document.getElementsByName('calc')[0].value = parseInt(document.getElementsByName('resultado')[0].value) / parseInt(document.getElementsByName('calc')[0].value);
-                break;
-
-            default:
-                break;
-        }
-
-    }
-
-    function suma() {
-        document.getElementsByName('resultado')[0].value = document.getElementsByName('calc')[0].value;
-        document.getElementsByName('calc')[0].value = "0";
-        document.getElementsByName('operacion')[0].value = "suma";
-    }
-
-    function resta() {
-        document.getElementsByName('resultado')[0].value = document.getElementsByName('calc')[0].value;
-        document.getElementsByName('calc')[0].value = "0";
-        document.getElementsByName('operacion')[0].value = "resta";
-    }
-
-    function multiplicacion() {
-        document.getElementsByName('resultado')[0].value = document.getElementsByName('calc')[0].value;
-        document.getElementsByName('calc')[0].value = "0";
-        document.getElementsByName('operacion')[0].value = "multiplicacion";
-    }
-
-    function division() {
-        document.getElementsByName('resultado')[0].value = document.getElementsByName('calc')[0].value;
-        document.getElementsByName('calc')[0].value = "0";
-        document.getElementsByName('operacion')[0].value = "division";
-    }
-
+function enter(){
+    
+}  
+    
     function calc0() {
         if (document.getElementsByName('calc')[0].value == "0") {
             document.getElementsByName('calc')[0].value = "0";

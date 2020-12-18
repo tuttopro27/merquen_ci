@@ -6,7 +6,7 @@ use App\Models\MesasModels;
 use App\Models\PuntosModels;
 use FFI\Exception;
 
-class Mesas extends BaseController
+class mesas extends BaseController
 {
     public function index()
     {

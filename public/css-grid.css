@@ -1,15 +1,10 @@
 .divTable{
-    height: auto;
-    width: auto;
-    display: table;
-    background-image: url("img/piso-madera.jpg");
-    max-width: 100% !important;
-	margin-right: 4.16666667%;
-	max-height: 100% !important;
-  
-}
+	display: table;
+	
+	}
 .divTableRow {
 	display: table-row;
+	width: 100%;
 }
 .divTableHeading {
 	background-color: #EEE;
@@ -18,8 +13,8 @@
 .divTableCell, .divTableHead {
 	border: 0px solid #999999;
 	display: table-cell;
-  	height: 100px;
-  	width: 100px;
+	width: 90px;
+	height: 90px;
 }
 .divTableHeading {
 	background-color: #EEE;
@@ -35,19 +30,60 @@
 	display: table-row-group;
 }
 
-.divflotante{
+.divflotanteredondo{
+	position: relative;
+    top: -40px;
+	left: 25px;
+	font-weight: bolder;
+}
+.flotcuadrado{
 	font-weight: bolder;
 	position: relative;
-    top: -53px;
-    left: 37px;
+    top: -43px;
+    left: 18px;
+}
+.flotrect{
+	font-weight: bolder;
+	position: relative;
+    top: -20%;
+	left: 30%;
+	transform: translateY(-50%);
 }
 .TableRestaurante{
-    height: auto;
-    width: auto;
+    
     display: table;
-    max-width: 100%;
-	background-image: url("img/piso-restaurante.jpg");
-	max-width: 100% !important;
-	margin-right: 4.16666667%;
-	max-height: 100% !important;
-  }
+    
+}
+@media screen and (max-device-width:1920 ){
+	.divTable{	
+	background-size: contain !important;
+	background-repeat: no-repeat;
+	width: 100%;
+	
+	
+	
+	}
+}
+@media screen and (max-device-width:768px){
+	.divTable{	
+		background-size: contain;
+		background-repeat: no-repeat !important;
+		width: 75%;
+		
+	}
+}
+@media screen and ( max-device-width:568px){
+	.divTable{	
+		background-size: cover;
+		background-repeat: no-repeat !important;
+		width: 60%;
+	
+	}
+}
+.card-title-calc {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
